@@ -35,17 +35,17 @@ function openGroup(groupId, element) {
     showSection(groupId, element);
 }
 
-// 2. Fungsi Sub Menu Siklus
+// 2. Fungsi Sub Menu Artefak
 function openArtefak(artefakId, element) {
-    const contents = document.querySelectorAll('.siklus-content');
+    const contents = document.querySelectorAll('.artefak-content');
     contents.forEach(content => content.classList.remove('show-content'));
 
     /* Hanya menghapus class aktif di dalam area Artefak saja */
-    const buttons = document.querySelectorAll('.siklus-tabs .tab-btn');
-    buttons.forEach(btn => btn.classList.remove('siklus-active'));
+    const buttons = document.querySelectorAll('.artefak-tabs .tab-btn');
+    buttons.forEach(btn => btn.classList.remove('artefak-active'));
 
     document.getElementById(artefakId).classList.add('show-content');
-    element.classList.add('siklus-active');
+    element.classList.add('artefak-active');
 }
 
 // 3. Fungsi Modal (Pop-Up Detail)
